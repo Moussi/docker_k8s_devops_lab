@@ -1,0 +1,19 @@
+<mgl-map [style]="'mapbox://styles/aymenmoussi/ck403p0qz2jml1co7c48zkaow'" [zoom]="[13]" [center]="[lng, lat]">
+  <mgl-marker [lngLat]="[lng, lat]">
+    <!-- <div class="circle"></div> -->
+    <div class="sonar-wrapper">
+      <div class="sonar-emitter">
+        <div class="sonar-wave"></div>
+      </div>
+    </div>
+  </mgl-marker> 
+  <div *ngIf="show_popup">
+      <mgl-popup 
+      [lngLat]="[lng, lat]" 
+      [marker]="myMarker" 
+      [closeButton]="show_popup" 
+      [closeOnClick]="show_popup">
+        <div>Oupppsss!!! the location <b>{{location}}</b> is not found :'( :'(  </div>
+      </mgl-popup>
+    </div>  
+</mgl-map>

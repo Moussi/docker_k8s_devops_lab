@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+    mongo-server:
+        image: 'mongo:4.2.5-bionic'
+        ports:
+            - "27017:27017"
+    node-server:
+        build: 
+            context: .
+            dockerfile: Dockerfile.node
+        ports:
+            - "3001:3001"
+        volumes: 
+            - "/app/node_modules"
+            - "./:/app"
+    karya:
+        build: 
+            context: .
+            dockerfile: Dockerfile.dev
+        ports: 
+            - "4201:4200"
+            - "9876:9876"
+        volumes: 
+            - "/app/node_modules"
+            - "./:/app"

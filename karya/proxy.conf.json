@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "http://node-server:3001",
+      "secure": false
+    }
+}

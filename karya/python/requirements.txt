@@ -1,0 +1,10 @@
+flask
+flask_restful
+flask-migrate
+flask-bcrypt
+flask-script
+SQLAlchemy
+marshmallow
+pyjwt
+
+-e ".[develop, doc, test]"
