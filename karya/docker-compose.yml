@@ -15,12 +15,16 @@ services:
             - "/app/node_modules"
             - "./:/app"
     karya:
-        build: 
-            context: .
-            dockerfile: Dockerfile.dev
+        build: .
         ports: 
-            - "4201:4200"
-            - "9876:9876"
-        volumes: 
-            - "/app/node_modules"
-            - "./:/app"
+            - "80:80"
+    # karya:
+    #     build: 
+    #         context: .
+    #         dockerfile: Dockerfile.dev
+    #     ports: 
+    #         - "4201:4200"
+    #         - "9876:9876"
+    #     volumes: 
+    #         - "/app/node_modules"
+    #         - "./:/app"
