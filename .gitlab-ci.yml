@@ -19,7 +19,3 @@ deploy_job:
   environment:
     name: staging
     url: http://$PLAYWD-8080.direct.labs.play-with-docker.com
-
-
-
-    http://172-18-0-106-bqa46vtim9m000fjjuig-8080.direct.labs.play-with-docker.com
