@@ -5,3 +5,6 @@ services:
 
 before_install:
     - docker build -t Moussi/karya -f Dockerfile.dev .
+
+script:
+    - docker run Moussi/karya ng test -- --no-watch --no-progress
