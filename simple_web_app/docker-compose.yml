@@ -1,9 +1,0 @@
-version: '3'
-
-services:
-    redis-server:
-        image: 'redis'
-    web-app:
-        build: .
-        ports: 
-            - "8080:8080"
