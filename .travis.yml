@@ -4,7 +4,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t Moussi/karya -f Dockerfile.dev .
+    - docker build -t moussi/karya -f Dockerfile.dev .
 
 script:
-    - docker run Moussi/karya ng test -- --no-watch --no-progress
+    - docker run moussi/karya ng test -- --no-watch --no-progress
