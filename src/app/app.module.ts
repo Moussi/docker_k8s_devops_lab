@@ -3,21 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './common/header/header.component';
 import { RentalModule } from './rental/rental.module';
 import { AuthModule } from './auth/auth.module';
+import { HeaderModule } from './common/header/header.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     RentalModule,
     AppRoutingModule,
+    HeaderModule,
     AuthModule
   ],
+  exports: [HeaderModule],
   providers: [],
   bootstrap: [AppComponent]
 })
