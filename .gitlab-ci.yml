@@ -15,7 +15,6 @@ deploy_job:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
     - pip install docker-compose
     - export DOCKER_HOST=tcp://$PLAYWD.direct.labs.play-with-docker.com:2375
-    - docker-compose down -v --rmi all -f ./karya/docker-compose.yml
     - docker-compose up -d -f ./karya/docker-compose.yml
   environment:
     name: staging
