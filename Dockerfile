@@ -1,5 +1,5 @@
 # BUILD PHASE
-FROM node:10.17.0 as builder
+FROM node:10.17.0
 
 WORKDIR '/app'
 
@@ -26,6 +26,6 @@ COPY ./nginx.conf /etc/nginx/nginx.conf
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy from the stahg 1
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=0 /app/dist /usr/share/nginx/html
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
